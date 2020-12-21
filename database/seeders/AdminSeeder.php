@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Admin;
-use Fadi\LaravelRole\Role\Role;
 use Illuminate\Database\Seeder;
 
 class AdminSeeder extends Seeder
@@ -19,7 +18,7 @@ class AdminSeeder extends Seeder
             'name' => 'Administrator',
             'email' => 'admin@alsharobim.com',
             'username' => 'admin',
-            'role_id' => Role::first()->id,
+            'role_id' => 1,
             'password' => bcrypt('123456'),
         ]);
     }

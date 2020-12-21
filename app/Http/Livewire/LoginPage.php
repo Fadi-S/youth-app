@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire;
 
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Livewire\Component;
 
 class LoginPage extends Component
@@ -32,6 +31,7 @@ class LoginPage extends Component
             return;
         }
 
+        /** TODO send error message to user */
 
     }
 
