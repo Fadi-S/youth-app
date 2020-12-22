@@ -1,12 +1,12 @@
-<button class="flex items-center pt-2 bg-opacity-25 text-gray-100 w-full focus:outline-none
- group flex items-center text-sm font-medium rounded-md overflow-hidden"
+<button class="flex items-center py-1 bg-opacity-25 text-gray-100 w-full focus:outline-none
+ group flex items-center text-sm font-medium rounded-md overflow-hidden hover:bg-indigo-600"
         :class="isOpen ? 'bg-indigo-400 text-white shadow-inner' : 'text-indigo-100'"
         type="button"
         x-data="{isOpen: false, id: Math.random()}"
         @click="isOpen = !isOpen; if(isOpen) $dispatch('close-all', { except: id });">
 
     <div class="flex-col w-full">
-        <div class="justify-between flex w-full px-2 py-2">
+        <div class="justify-between items-center flex w-full px-2 py-2">
             <div class="flex items-center">
 
                 <div class="mr-3 h-6 w-6 text-indigo-300">

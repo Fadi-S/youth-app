@@ -21,7 +21,7 @@ trait Slugable
         $reflection = new \ReflectionClass(get_class());
         $model = $reflection->newInstance();
 
-        return !$model->withTrashed()->where([[static::$slug, $username], ["id", "<>", $ignoreId]])->exists();
+        return !$model->where([[static::$slug, $username], ["id", "<>", $ignoreId]])->exists();
     }
 
     public static function makeSlug($string, $ignoreId=0, $iteration=0)

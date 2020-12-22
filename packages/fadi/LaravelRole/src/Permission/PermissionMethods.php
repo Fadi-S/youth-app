@@ -16,6 +16,6 @@ trait PermissionMethods
 
     public static function permissionsArray()
     {
-        return config('roles.default_permissions');
+        return config('role.default_permissions');
     }
 }

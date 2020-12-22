@@ -94,7 +94,7 @@
                         <div @click.away="open = false" class="ml-3 relative" x-data="{ open: false }">
                             <div>
                                 <button @click="open = !open"
-                                        class="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                        class="max-w-xs bg-white flex items-center p-1 text-sm rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                         id="user-menu" aria-haspopup="true" x-bind:aria-expanded="open">
                                     <span class="sr-only">Open user menu</span>
                                     <span class="text-sm text-gray-500 font-normal">{{ auth()->user()->name }}</span>
@@ -116,9 +116,6 @@
                                 <a href="{{ url('/profile') }}"
                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your
                                     Profile</a>
-
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                   role="menuitem">Settings</a>
 
                                 <form method="POST" action="{{ url('logout') }}">
                                     @csrf

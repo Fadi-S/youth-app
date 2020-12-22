@@ -15,6 +15,9 @@ class Admin extends Authenticatable
 
     protected $guarded = [];
 
+    protected $defaultPicture = 'images/defaultPicture.png';
+    protected $imagePath = 'public/photos/admins/';
+
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
