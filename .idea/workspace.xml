@@ -4,25 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff8d6aac-14d5-4c19-94d7-4af8a1c85927" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Forms/AdminForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/layout/form/input.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/layout/form/select.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/success.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/svg/field-error.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/forms/admin-form.blade.php" afterDir="false" />
+    <list default="true" id="ff8d6aac-14d5-4c19-94d7-4af8a1c85927" name="Default Changelist" comment="Added Admin Form for editing and creating admins">
+      <change afterPath="$PROJECT_DIR$/resources/views/components/layout/sidepanel.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/HasPicture.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/HasPicture.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/Slugable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/Slugable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_19_190052_create_sections_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_19_190052_create_sections_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_19_190059_create_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_19_190059_create_tasks_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/fadi/LaravelRole/src/Permission/PermissionMethods.php" beforeDir="false" afterPath="$PROJECT_DIR$/packages/fadi/LaravelRole/src/Permission/PermissionMethods.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/navbar/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/navbar/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/navbar/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/navbar/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/base.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/layout/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/layout/details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,15 +203,40 @@
       <updated>1608403721497</updated>
       <workItem from="1608403722718" duration="11397000" />
       <workItem from="1608489205929" duration="17206000" />
-      <workItem from="1608545338389" duration="8307000" />
+      <workItem from="1608545338389" duration="8441000" />
+      <workItem from="1608635053374" duration="11000" />
+      <workItem from="1608663755401" duration="5477000" />
+      <workItem from="1608687234651" duration="1055000" />
     </task>
+    <task id="LOCAL-00001" summary="Added Admin Form for editing and creating admins">
+      <created>1608603183227</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608603183227</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added Admin Form for editing and creating admins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Admin Form for editing and creating admins" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
