@@ -31,6 +31,8 @@ class AdminForm extends Component
 
     public function updated($field)
     {
+        $this->validateOnly($field);
+
         $this->resetErrorBag($field);
     }
 
@@ -62,7 +64,7 @@ class AdminForm extends Component
         $rules = [
             'admin.name' => 'required',
             'admin.username' => 'required|unique:admins,username',
-            'admin.email' => 'required|unique:admins,email',
+            'admin.email' => 'email|required|unique:admins,email',
             'password' => 'required|min:6|max:64',
             'role_id' => 'required|exists:roles,id',
         ];

@@ -8,25 +8,25 @@
             <div class="px-4 py-5 bg-white sm:p-6">
                 <div class="grid grid-cols-6 gap-6">
                     <div class="col-span-6 sm:col-span-3">
-                        <x-layout.form.input wire:model="admin.name"
+                        <x-layout.form.input wire:model="admin.name" required
                                              type="text" label="Name" :error="$errors->first('admin.name')"
                                              name="name" id="name" autocomplete="name" />
                     </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                        <x-layout.form.input wire:model="admin.username"
+                        <x-layout.form.input wire:model="admin.username" required
                                              type="text" label="Username" :error="$errors->first('admin.username')"
                                              name="username" id="username" autocomplete="new-username" />
                         </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                        <x-layout.form.input wire:model.lazy="admin.email"
+                        <x-layout.form.input wire:model.lazy="admin.email" required
                                              type="email" label="Email address" :error="$errors->first('admin.email')"
                                              name="email" id="email" autocomplete="email" />
                         </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                        <x-layout.form.input wire:model.lazy="password"
+                        <x-layout.form.input wire:model.lazy="password" required
                                              type="password" label="Password" :error="$errors->first('password')"
                                              name="password" id="password" autocomplete="new-password" />
                         </div>
@@ -42,9 +42,12 @@
                     </div>
                 </div>
             </div>
-            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <div class="px-4 py-3 bg-gray-50 text-center md:text-right sm:px-6">
                 <button type="submit"
-                        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        class="inline-flex justify-center py-2 px-4 border border-transparent
+                         shadow-sm text-sm font-medium rounded-md text-white
+                         bg-indigo-600 hover:bg-indigo-700 focus:outline-none
+                         focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     <svg wire:loading.remove wire:target="save" class="-ml-1 mr-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                          xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>

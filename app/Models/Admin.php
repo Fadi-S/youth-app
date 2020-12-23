@@ -18,6 +18,8 @@ class Admin extends Authenticatable
     protected $defaultPicture = 'images/defaultPicture.png';
     protected $imagePath = 'public/photos/admins/';
 
+    protected $with = ['role'];
+
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
