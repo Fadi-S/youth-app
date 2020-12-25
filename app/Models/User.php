@@ -8,15 +8,16 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, Slugable, HasPicture;
+    use HasFactory, Notifiable, Slugable, HasPicture, HasApiTokens;
 
     protected $defaultPicture = 'images/defaultPicture.png';
     protected $imagePath = 'public/photos/users/';
 
-    protected $fillable = ['name', 'email', 'password'];
+    protected $guarded = [];
 
     protected $hidden = ['password', 'remember_token'];
 
