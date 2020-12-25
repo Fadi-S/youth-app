@@ -1,4 +1,15 @@
 <x-layout>
+
+    <x-slot name="breadcrumb">
+        <x-layout.breadcrumb url="/admins">
+            Admins
+        </x-layout.breadcrumb>
+
+        <x-layout.breadcrumb :url="'/admins/' . $admin->username">
+            {{ $admin->name }}
+        </x-layout.breadcrumb>
+    </x-slot>
+
     <main class="bg-white rounded-lg flex-1 relative z-0 overflow-y-auto focus:outline-none xl:order-last" tabindex="0"
           x-data="" x-init="$el.focus()">
 

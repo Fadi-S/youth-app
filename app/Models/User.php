@@ -16,6 +16,14 @@ class User extends Authenticatable
     protected $defaultPicture = 'images/defaultPicture.png';
     protected $imagePath = 'public/photos/users/';
 
+    protected $fillable = ['name', 'email', 'password'];
+
+    protected $hidden = ['password', 'remember_token'];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
@@ -24,33 +32,15 @@ class User extends Authenticatable
         static::$slug = "username";
     }
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    public function complete($task)
+    {
+        $method = is_array($task) ? 'saveMany' : 'save';
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+        $this->tasks()->$method($task);
+    }
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function tasks()
+    {
+        return $this->belongsToMany(Task::class);
+    }
 }

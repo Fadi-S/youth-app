@@ -4,6 +4,8 @@
 namespace App\Traits;
 
 
+use Illuminate\Support\Str;
+
 trait HasPicture
 {
 
@@ -15,8 +17,16 @@ trait HasPicture
         return url(\Storage::url($this->imagePath . $picture));
     }
 
-    public function savePicture($image)
+    public function savePicture($picture)
     {
+        if($picture == null)
+            return;
 
+        $pictureName = Str::random(40) . '.' . $picture->extension();
+        $picture->storeAs($this->imagePath, $pictureName);
+
+        $this->picture = $pictureName;
+
+        $this->save();
     }
 }

@@ -4,13 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff8d6aac-14d5-4c19-94d7-4af8a1c85927" name="Default Changelist" comment="Added sidepanel.blade.php details">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ViewAdmins.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/view-admins.blade.php" afterDir="false" />
+    <list default="true" id="ff8d6aac-14d5-4c19-94d7-4af8a1c85927" name="Default Changelist" comment="Added View Admins page">
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Forms/SectionForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ViewSections.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/layout/button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/layout/wizard/body.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/layout/wizard/step.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/svg/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/svg/check.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/svg/loading.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/svg/next.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/svg/search.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/svg/x.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/forms/section-form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/view-sections.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Forms/AdminForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Forms/AdminForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Section.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Section.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/HasPicture.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/HasPicture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/forms/admin-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/forms/admin-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/view-admins.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/view-admins.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +224,10 @@
       <workItem from="1608545338389" duration="8441000" />
       <workItem from="1608635053374" duration="11000" />
       <workItem from="1608663755401" duration="5477000" />
-      <workItem from="1608687234651" duration="2403000" />
+      <workItem from="1608687234651" duration="2500000" />
+      <workItem from="1608751541149" duration="1829000" />
+      <workItem from="1608816226954" duration="6945000" />
+      <workItem from="1608849983155" duration="8409000" />
     </task>
     <task id="LOCAL-00001" summary="Added Admin Form for editing and creating admins">
       <created>1608603183227</created>
@@ -222,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608689364401</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added View Admins page">
+      <created>1608690741949</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608690741949</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +272,19 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added Admin Form for editing and creating admins" />
     <MESSAGE value="Added sidepanel.blade.php details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sidepanel.blade.php details" />
+    <MESSAGE value="Added View Admins page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added View Admins page" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/components/svg/x.blade.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
