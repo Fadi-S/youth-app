@@ -25,12 +25,8 @@
                 Section Details
             </x-layout.wizard.step>
 
-            <x-layout.wizard.step :step="2" :selected="$step">
+            <x-layout.wizard.step :step="2" :selected="$step" :last="true">
                 Tasks
-            </x-layout.wizard.step>
-
-            <x-layout.wizard.step :step="3" :selected="$step" :last="true">
-                Preview
             </x-layout.wizard.step>
         </x-layout.wizard.body>
     </div>
@@ -161,7 +157,7 @@
                     <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                         <x-layout.button type="submit">
                             <x-slot name="svg">
-                                <x-svg.next wire:loading.remove wire:target="saveTasks" />
+                                <x-svg.check wire:loading.remove wire:target="saveTasks" />
                                 <x-svg.loading wire:loading wire:target="saveTasks" />
                             </x-slot>
 
@@ -172,12 +168,6 @@
                 </div>
             </form>
 
-            @break
-
-            @case(3)
-            <div class="bg-white">
-                Nice!
-            </div>
             @break
         @endswitch
     </div>

@@ -52,11 +52,16 @@ class AuthController extends Controller
         return $this->formatUser($user, $user->createToken($validated['device_name']));
     }
 
-    private function formatUser(User $user, $token)
+    public function loggedUser(Request $request)
+    {
+        return $this->formatUser($request->user());
+    }
+
+    private function formatUser(User $user, $token=null)
     {
         return [
             'name' => $user->name,
-            'api_token' => $token->plainTextToken,
+            'api_token' => $token ? $token->plainTextToken : null,
             'email' => $user->email,
             'username' => $user->username,
             'picture' => $user->picture,

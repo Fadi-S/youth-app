@@ -78,14 +78,12 @@ class SectionForm extends Component
         $this->section->tasks()->truncate();
         $this->section->tasks()->saveMany($tasks);
 
-        session()->flash('success', 'Task Saved Successfully');
-
-        $this->step = 3;
+        session()->flash('success', 'Tasks Saved Successfully');
     }
 
     public function removeTask($key)
     {
-        $this->tasks = array_splice($this->tasks, $key-1, 1);
+        unset($this->tasks[$key]);
     }
 
     private function resetForm()

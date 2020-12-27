@@ -16,8 +16,8 @@
         <article>
             <div>
                 <div>
-                    <img class="h-32 w-full object-cover lg:h-48"
-                         src="https://images.unsplash.com/photo-1444628838545-ac4016a5418a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80"
+                    <img class="w-full object-cover lg:h-64 object-top"
+                         src="{{ asset('images/forsan-750.jpg') }}"
                          alt="">
                 </div>
                 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
