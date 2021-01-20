@@ -3,7 +3,13 @@
 use App\Models\Admin;
 use App\Http\Controllers\{DashboardController};
 
-use App\Http\Livewire\{Forms\SectionForm, ViewAdmins, Forms\AdminForm, LoginPage, ViewSections};
+use App\Http\Livewire\{Forms\SectionForm,
+    Forms\UserForm,
+    ViewAdmins,
+    Forms\AdminForm,
+    LoginPage,
+    ViewSections,
+    ViewUsers};
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
@@ -18,6 +24,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/admins/{admin}',
         fn(Admin $admin) => view('admins.show', compact('admin'))
     )->name('admins.show');
+
+    Route::get('/users/create', UserForm::class);
+    Route::get('/users/{user}/edit', UserForm::class);
+    Route::get('/users', ViewUsers::class);
 
     Route::get('/sections/create', SectionForm::class);
     Route::get('/sections/{section}/edit', SectionForm::class);

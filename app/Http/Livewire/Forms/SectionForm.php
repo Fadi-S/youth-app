@@ -58,7 +58,7 @@ class SectionForm extends Component
 
         $this->section->savePicture($this->picture);
 
-        $this->resetForm();
+        $this->section = $this->section->refresh();
 
         $this->step = 2;
 
@@ -72,10 +72,12 @@ class SectionForm extends Component
 
     public function saveTasks()
     {
+        $this->section = $this->section->refresh();
+
         $tasks = collect($this->tasks)
             ->mapInto(Task::class);
 
-        $this->section->tasks()->truncate();
+        Task::where('section_id', $this->section->id)->delete();
         $this->section->tasks()->saveMany($tasks);
 
         session()->flash('success', 'Tasks Saved Successfully');

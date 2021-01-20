@@ -1,25 +1,25 @@
 <div class="mt-5 md:mt-0 md:col-span-2">
     <x-slot name="breadcrumb">
-        <x-layout.breadcrumb url="/admins">
-            Admins
+        <x-layout.breadcrumb url="/users">
+            Users
         </x-layout.breadcrumb>
 
         @if($isCreate)
-            <x-layout.breadcrumb url="/admins/create">
+            <x-layout.breadcrumb url="/users/create">
                 Add
             </x-layout.breadcrumb>
         @else
-            <x-layout.breadcrumb :url="'/admins/' . $admin->username">
-                {{ $admin->name }}
+            <x-layout.breadcrumb :url="'/users/' . $user->username">
+                {{ $user->name }}
             </x-layout.breadcrumb>
-            <x-layout.breadcrumb :url="'/admins/' . $admin->username . '/edit'">
+            <x-layout.breadcrumb :url="'/users/' . $user->username . '/edit'">
                 Edit
             </x-layout.breadcrumb>
         @endif
     </x-slot>
 
     @if(session()->has('success'))
-    <x-success>{{ session('success') }}</x-success>
+        <x-success>{{ session('success') }}</x-success>
     @endif
 
     <form action="#" method="POST" wire:submit.prevent="save">
@@ -27,37 +27,33 @@
             <div class="px-4 py-5 bg-white sm:p-6">
                 <div class="grid grid-cols-6 gap-6">
                     <div class="col-span-6 sm:col-span-3">
-                        <x-layout.form.input wire:model="admin.name" required
-                                             type="text" label="Name" :error="$errors->first('admin.name')"
+                        <x-layout.form.input wire:model="user.name" required
+                                             type="text" label="Name" :error="$errors->first('user.name')"
                                              name="name" id="name" autocomplete="name" />
                     </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                        <x-layout.form.input wire:model="admin.username" required
-                                             type="text" label="Username" :error="$errors->first('admin.username')"
+                        <x-layout.form.input wire:model="user.username" required
+                                             type="text" label="Username" :error="$errors->first('user.username')"
                                              name="username" id="username" autocomplete="new-username" />
-                        </div>
+                    </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                        <x-layout.form.input wire:model.lazy="admin.email" required
-                                             type="email" label="Email address" :error="$errors->first('admin.email')"
+                        <x-layout.form.input wire:model.lazy="user.email" required
+                                             type="email" label="Email address" :error="$errors->first('user.email')"
                                              name="email" id="email" autocomplete="email" />
-                        </div>
+                    </div>
 
                     <div class="col-span-6 sm:col-span-3">
                         <x-layout.form.input wire:model.lazy="password"
                                              type="password" label="Password" :error="$errors->first('password')"
                                              name="password" id="password" autocomplete="new-password" />
-                        </div>
+                    </div>
 
                     <div class="col-span-6 sm:col-span-3">
-                        <x-layout.form.select wire:model="role_id" id="role_id" name="role_id" label="Role"
-                                              :error="$errors->first('role_id')">
-                            <option value="0">-</option>
-                            @foreach($roles as $id => $role)
-                                <option value="{{ $id }}">{{ $role }}</option>
-                            @endforeach
-                        </x-layout.form.select>
+                        <x-layout.form.input wire:model.lazy="user.phone" required
+                                             type="text" label="Phone number" :error="$errors->first('user.phone')"
+                                             name="phone" id="phone" autocomplete="phone" />
                     </div>
                 </div>
             </div>

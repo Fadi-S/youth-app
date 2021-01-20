@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AuthController;
 use App\Models\Section;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,9 @@ Route::middleware('auth:sanctum')->group(function() {
 
     Route::get('/sections', function () {
         return [
-          'sections' => Section::all()->toArray(),
+          'sections' => Section::with(['tasks' =>
+              fn($query) => $query->whereDate('date', Carbon::today())
+          ])->toArray(),
         ];
     });
 

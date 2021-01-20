@@ -95,7 +95,7 @@
 
                                     <x-svg.loading wire:loading wire:target="save" />
                                 </x-slot>
-                                Save
+                                Save and Continue
                             </x-layout.button>
                         </div>
                     </div>

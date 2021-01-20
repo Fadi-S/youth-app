@@ -26,7 +26,7 @@ class AdminForm extends Component
     public function updatedAdminName($name)
     {
         $this->admin->username = Admin::makeSlug($name, $this->admin->id);
-        $this->resetErrorBag('admin.username');
+        $this->validateOnly('admin.username');
     }
 
     public function updated($field)
@@ -54,7 +54,7 @@ class AdminForm extends Component
 
         $this->resetForm();
 
-        session()->flash('success', 'User Saved Successfully');
+        session()->flash('success', 'Admin Saved Successfully');
     }
 
     public function rules()
