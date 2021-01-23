@@ -127,7 +127,8 @@
                                 <div class="col-span-1" wire:key="task-{{ $key }}">
                                     <div class="space-x-2 flex items-center w-full">
                                         <div class="w-5/12">
-                                            <x-layout.form.input wire:model="tasks.{{$key}}.title" required
+                                            <x-layout.form.textarea wire:model="tasks.{{$key}}.title" required
+                                                                    dir="auto"
                                                                  type="text" label="Task Name"
                                                                  :error="$errors->first('tasks.{{$key}}.title')"
                                                                  name="name" id="task-{{ $key }}-name"

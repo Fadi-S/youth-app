@@ -14,6 +14,8 @@ class Section extends Model
     protected $defaultPicture = 'images/defaultPicture.png';
     protected $imagePath = 'public/photos/sections/';
 
+    protected $with = ['tasks'];
+
     protected $guarded = [];
 
     public function tasks()

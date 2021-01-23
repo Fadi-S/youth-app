@@ -35,9 +35,7 @@ class User extends Authenticatable
 
     public function complete($task)
     {
-        $method = is_array($task) ? 'saveMany' : 'save';
-
-        $this->tasks()->$method($task);
+        $this->tasks()->attach($task, ['completed_at' => now()]);
     }
 
     public function tasks()

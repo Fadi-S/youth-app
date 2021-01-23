@@ -5,24 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff8d6aac-14d5-4c19-94d7-4af8a1c85927" name="Default Changelist" comment="Added api login and register">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Forms/UserForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ViewUsers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/svg/arrow-down-circle.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/svg/arrow-up-circle.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/forms/user-form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/view-users.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/SectionFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/TaskFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/layout/form/textarea.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/TasksTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Forms/AdminForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Forms/AdminForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Forms/SectionForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Forms/SectionForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/SecureConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/SecureConnection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Section.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Section.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/layout/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/layout/details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/success.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/success.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/forms/admin-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/forms/admin-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_19_190059_create_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_19_190059_create_tasks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/forms/section-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/forms/section-form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,23 +173,24 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/fadi/LaravelRole/vendor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Projects\youth" />
       <recent name="F:\Projects\youth\app\Http\Middleware" />
       <recent name="F:\Projects\youth\app\Traits" />
       <recent name="F:\Projects\youth\resources\views\components\navbar" />
       <recent name="F:\Projects\youth\public\images" />
-      <recent name="F:\Projects\youth\packages\fadi\LaravelRole\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Projects\youth\packages\fadi\laravel-roles" />
@@ -205,7 +200,19 @@
       <recent name="F:\Projects\youth\packages\Fadi-S\laravel-roles\src\Role" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.TasksTest.a_user_can_complete_a_task">
+    <configuration name="TasksTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\TasksTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/TasksTest.php" scope="Class" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TasksTest.a_user_can_complete_a_list_of_tasks" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\TasksTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/TasksTest.php" method="a_user_can_complete_a_list_of_tasks" scope="Method" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TasksTest.a_user_can_complete_a_task" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\TasksTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/TasksTest.php" method="a_user_can_complete_a_task" scope="Method" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -215,6 +222,19 @@
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHPUnit.TasksTest" />
+      <item itemvalue="PHPUnit.TasksTest.a_user_can_complete_a_list_of_tasks" />
+      <item itemvalue="PHPUnit.TasksTest.a_user_can_complete_a_task" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.TasksTest.a_user_can_complete_a_task" />
+        <item itemvalue="PHPUnit.TasksTest" />
+        <item itemvalue="PHPUnit.TasksTest.a_user_can_complete_a_list_of_tasks" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -238,7 +258,12 @@
       <workItem from="1609065435647" duration="3987000" />
       <workItem from="1609501573125" duration="738000" />
       <workItem from="1611076951939" duration="1205000" />
-      <workItem from="1611094393931" duration="2886000" />
+      <workItem from="1611094393931" duration="3241000" />
+      <workItem from="1611143634769" duration="10000" />
+      <workItem from="1611177860949" duration="1372000" />
+      <workItem from="1611231062250" duration="1776000" />
+      <workItem from="1611245810945" duration="13000" />
+      <workItem from="1611339282746" duration="8814000" />
     </task>
     <task id="LOCAL-00001" summary="Added Admin Form for editing and creating admins">
       <created>1608603183227</created>
